@@ -69,6 +69,11 @@ nav {
   color: var(--primary);
 }
 
+/* Markeert de pagina die je nu bekijkt (class="active" in de HTML) */
+.nav-links a.active {
+  color: var(--primary);
+}
+
 .menu-toggle {
   display: none;
   background: none;
@@ -130,6 +135,28 @@ section h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
   text-align: center;
+}
+
+/* INTROductie bovenaan een losse pagina, zoals projecten.html */
+.page-intro {
+  padding: 4rem 5% 0;
+  text-align: center;
+}
+
+.page-intro p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--text-muted);
+}
+
+/* Afsluitende oproep tot actie onderaan projecten.html */
+#contact-cta {
+  text-align: center;
+}
+
+#contact-cta p {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
 }
 
 /* ABOUT */
@@ -207,6 +234,30 @@ section h2 {
 
 .project-card .btn {
   margin: 0 1.25rem 1.25rem;
+}
+
+/* Placeholder-afbeelding: neemt de plek in die een echte foto zou nemen.
+   Je vervangt hem later door <img src="images/project1.jpg" alt="...">,
+   waarna de regel .project-card img hierboven die automatisch op maat maakt. */
+.project-placeholder {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), #7c3aed);
+}
+
+/* Elke kaart krijgt een eigen kleurverloop, via nth-child op de kaartpositie */
+.project-card:nth-child(2) .project-placeholder {
+  background: linear-gradient(135deg, #7c3aed, #db2777);
+}
+
+.project-card:nth-child(3) .project-placeholder {
+  background: linear-gradient(135deg, #0d9488, #2563eb);
 }
 
 /* CONTACT */

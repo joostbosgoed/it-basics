@@ -13,15 +13,20 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
 
 const contactForm = document.getElementById("contact-form");
 
-contactForm.addEventListener("submit", (e) => {
-  e.preventDefault();
+// Dit formulier bestaat alleen op index.html. Op projecten.html levert
+// elementById niets op, dus zonder deze controle zou de regel hieronder
+// een TypeError geven en zou het hele script stoppen met werken.
+if (contactForm) {
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-  const formData = new FormData(contactForm);
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const message = formData.get("message");
+    const formData = new FormData(contactForm);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const message = formData.get("message");
 
-  console.log("Formulier ingevuld:", { name, email, message });
-  alert("Bedankt voor je bericht, " + name + "!");
-  contactForm.reset();
-});
+    console.log("Formulier ingevuld:", { name, email, message });
+    alert("Bedankt voor je bericht, " + name + "!");
+    contactForm.reset();
+  });
+}
