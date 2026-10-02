@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <!-- Stelt de tekencodering in op UTF-8 (ondersteunt alle tekens includingAccenten) -->
+  <meta charset="UTF-8">
+  <!-- Zorgt ervoor dat de website goed schaalt op mobiele apparaten -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- De titel die in het browser-tabblad verschijnt -->
+  <title>Mijn Portfolio</title>
+  <!-- Link naar het CSS-bestand voor de opmaak -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== HEADER / NAVIGATIE ========== -->
+  <header>
+    <nav>
+      <!-- Logo links in de navigatiebalk -->
+      <div class="logo">Portfolio</div>
+
+      <!-- Navigatielijst met links naar de secties op de pagina -->
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Over mij</a></li>
+        <li><a href="#projects">Projecten</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger menu-knop voor mobiele apparaten (verborgen op desktop) -->
+      <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+    </nav>
+  </header>
+
+  <!-- ========== HOOFDINHOUD ========== -->
+  <main>
+
+    <!-- ===== HERO SECTIE ===== -->
+    <!-- Het eerste wat de bezoeker ziet: begroeting en oproep tot actie -->
+    <section id="home" class="hero">
+      <h1>Hallo, ik ben <span class="highlight">Joost Bosgoed</span></h1>
+      <p>Webontwikkelaar | Designer | Creator</p>
+      <!-- Knop die naar de projecten-sectie scrolt -->
+      <a href="#projects" class="btn">Bekijk mijn werk</a>
+    </section>
+
+    <!-- ===== OVER MIJ SECTIE ===== -->
+    <!-- Korte introductie over jezelf en je vaardigheden -->
+    <section id="about">
+      <h2>Over mij</h2>
+      <div class="about-content">
+        <!-- Profielfoto (vervang profile.jpg door je eigen foto) -->
+        <img src="images/atletiek.jpeg" alt="Profielfoto" class="profile-img">
+        <div class="about-text">
+          <p>Schrijf hier iets over jezelf, je ervaring en je passie voor development.</p>
+          <!-- Lijst met vaardigheden / skills -->
+          <ul class="skills">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTEN SECTIE ===== -->
+    <!-- Overzicht van je projecten in een grid-layout -->
+    <section id="projects">
+      <h2>Projecten</h2>
+      <div class="project-grid">
+
+        <!-- Projectkaart 1 -->
+        <article class="project-card">
+          <img src="images/project1.jpg" alt="Project 1">
+          <h3>Project Titel</h3>
+          <p>Korte beschrijving van het project.</p>
+          <a href="#" class="btn">Bekijk project</a>
+        </article>
+
+        <!-- Projectkaart 2 -->
+        <article class="project-card">
+          <img src="images/project2.jpg" alt="Project 2">
+          <h3>Project Titel</h3>
+          <p>Korte beschrijving van het project.</p>
+          <a href="#" class="btn">Bekijk project</a>
+        </article>
+
+        <!-- Projectkaart 3 -->
+        <article class="project-card">
+          <img src="images/project3.jpg" alt="Project 3">
+          <h3>Project Titel</h3>
+          <p>Korte beschrijving van het project.</p>
+          <a href="#" class="btn">Bekijk project</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== CONTACT SECTIE ===== -->
+    <!-- Formulier zodat bezoekers contact kunnen opnemen -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <form id="contact-form">
+        <!-- required = verplicht veld -->
+        <input type="text" name="name" placeholder="Naam" required>
+        <input type="email" name="email" placeholder="E-mail" required>
+        <textarea name="message" placeholder="Bericht" rows="5" required></textarea>
+        <button type="submit" class="btn">Verstuur</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <p>&copy; 2026 Joost Bosgoed. Alle rechten voorbehouden.</p>
+  </footer>
+
+  <!-- Link naar het JavaScript-bestand voor interactiviteit -->
+  <script src="js/main.js"></script>
+</body>
+</html>
